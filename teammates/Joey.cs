@@ -1,20 +1,17 @@
 using System; 
+using dreamteam;
 
-namespace dreamteam.Joey
+
+public class Joey : IDreamteam
 {
-    public class Joey : IDreamteam
+    public string FirstName { get; set; } = "Joey";
+    public string LastName { get; set; } = "Biotti";
+    public string Speciality { get; set; } = "Veering outside of the exercise's instructions";
+    public string FullName { get => $"{this.FirstName} {this.LastName}";}
+
+
+    public void work()
     {
-        public string FirstName => throw new NotImplementedException();
-
-        public string LastName => throw new NotImplementedException();
-
-        public string FullName => throw new NotImplementedException();
-
-        public string Speciality => throw new NotImplementedException();
-
-        public void work()
-        {
-            throw new NotImplementedException();
-        }
+        Console.WriteLine($"{this.FirstName} barely remembers the 92 Dream Team.");
     }
 }

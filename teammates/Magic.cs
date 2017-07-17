@@ -1,21 +1,16 @@
 using System;
+using dreamteam;
 
-namespace dreamteam.Magic
+public class Magic : IDreamteam
 {
-    public class Magic : IDreamteam
+    public string FirstName {get; set; } ="Magic";
+    public string LastName { get; set; } = "Johnson";
+    public string Speciality { get; set; }= "Point Guard";
+    public string FullName {get => $"{this.FirstName} {this.LastName}";}
+
+    public void work()
     {
-        public string FirstName => throw new NotImplementedException("Magic");
-
-        public string LastName => throw new NotImplementedException("Johnson");
-
-        public string FullName => throw new NotImplementedException("Irving 'Magic' Johnson");
-
-        public string Speciality => throw new NotImplementedException("Point Guard");
-
-        public void work()
-        {
-            Console.WriteLine("Magic wasn't as good as Bird");
-        }
+    Console.WriteLine($"{this.FirstName} wasn't as good as Bird");
     }
-
 }
+

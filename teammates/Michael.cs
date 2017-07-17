@@ -1,21 +1,15 @@
 using System;
+using dreamteam;
 
-namespace dreamteam.Michael 
+public class Michael : IDreamteam
 {
-    public class Michael : IDreamteam
+    public string FirstName { get; set; } = "Michael";
+    public string LastName { get;  set; } = "Jordan";
+    public string Speciality {get; set; } = "Shooting Guard";
+    public string FullName {get => $"{this.FirstName} {this.LastName}";}
+
+    public void work()
     {
-        public string FirstName => throw new NotImplementedException("Michael");
-
-        public string LastName => throw new NotImplementedException("Jordan");
-
-        public string FullName => throw new NotImplementedException("Michael Jordan");
-
-        public string Speciality => throw new NotImplementedException("Shooting Guard");
-
-        public void work()
-        {
-            Console.WriteLine("The 2nd Greatest Ever");
-        }
+    Console.WriteLine($"{this.FullName} was ALMOST as good as Bird");
     }
-
 }
