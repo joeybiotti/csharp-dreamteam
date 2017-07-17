@@ -1,20 +1,15 @@
 using System; 
+using dreamteam;
 
-namespace dreamteam.Karl
+public class Karl : IDreamteam
 {
-    public class Karl : IDreamteam
+    public string FirstName { get; set; } = "Karl";
+    public string LastName { get; set; } = "Malone";
+    public string Speciality { get; set; } = "Power Forward";
+    public string FullName {get => $"{this.FirstName} {this.LastName}";}
+
+    public void work()
     {
-        public string FirstName => throw new NotImplementedException("Karl");
-
-        public string LastName => throw new NotImplementedException("Malone");
-
-        public string FullName => throw new NotImplementedException("Karl Malone");
-
-        public string Speciality => throw new NotImplementedException("Power Forward");
-
-        public void work()
-        {
-            Console.WriteLine("The Mailman");
-        }
+        Console.WriteLine($"{FullName}, A/K/A The Mailman");
     }
 }
